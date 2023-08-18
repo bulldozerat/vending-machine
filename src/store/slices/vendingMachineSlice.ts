@@ -55,6 +55,10 @@ const vendingMachineSlice = createSlice({
     },
     completeOrder(state) {
       const change = state.insertedMoney - state.activeProduct?.price!;
+      const product = state.products.find(p => p.id === state?.activeProduct?.id);
+      if (product?.stock) {
+        product.stock -= 1;
+      }
 
       state.isPayment = false;
       state.activeMessage = messages.successMessage + change + '$';

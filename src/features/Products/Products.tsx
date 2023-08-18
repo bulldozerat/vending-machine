@@ -9,18 +9,22 @@ const Products = ({ products }: IProducts) => {
   return (
     <div className={styles.productsWrapper}>
       {products.length &&
-        products.map(({ id, title, price, stock, code }) => (
-          <div key={id} className={styles.productWrapper}>
-            <div className={styles.productTitle}>{title}</div>
-            <div>
-              Code: <span>{code}</span>
+        products.map(({ id, title, price, stock, code }) => {
+          if (stock < 1) return;
+
+          return (
+            <div key={id} className={styles.productWrapper}>
+              <div className={styles.productTitle}>{title}</div>
+              <div>
+                Code: <span>{code}</span>
+              </div>
+              <div>Stock {stock}</div>
+              <div>
+                Price <span>{price}$</span>
+              </div>
             </div>
-            <div>Stock {stock}</div>
-            <div>
-              Price <span>{price}$</span>
-            </div>
-          </div>
-        ))}
+          );
+        })}
     </div>
   );
 };
