@@ -51,4 +51,7 @@ export const selectActiveMessage = (state: RootState) =>
 export const selectIsPayment = (state: RootState) =>
   state.vendingMachine.isPayment
 
+  export const selectActiveProduct = (state: RootState) =>
+  state.vendingMachine.activeProduct
+
 export default vendingMachineSlice.reducer
