@@ -11,7 +11,7 @@
       "id": 2,
       "title": "Coke",
       "price": 3.99,
-      "stock": 3,
+      "stock": 1,
       "code": "643"
     },
     {
@@ -44,7 +44,7 @@
     },
     {
       "id": 7,
-      "title": "Sneakers",
+      "title": "Bounty",
       "price": 7.2,
       "stock": 30,
       "code": "345"

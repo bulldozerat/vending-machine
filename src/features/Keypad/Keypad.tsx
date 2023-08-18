@@ -33,7 +33,9 @@ const Keypad = ({ keyPadKeys, proceedToPayment }: IKeypad) => {
 
   return (
     <div>
-      <div>You have entered: {currentKeysList} </div>
+      <div>
+        You have entered: <span className='bold'>{currentKeysList}</span>
+      </div>
       <div className={styles.keypadWrapper}>
         {keyPadKeys.map((key) => (
           <span key={key} onClick={() => changeKeyList(key)}>
