@@ -1,6 +1,7 @@
 .productsWrapper {
   display: inline-grid;
   grid-template-columns: repeat(3, 1fr);
+  width: 240px;
 }
 
 .productWrapper {

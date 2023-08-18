@@ -1,15 +1,11 @@
 import InformationMessageContainer from 'features/InformationMessage/InformationMessageContainer';
-import KeypadContainer from 'features/Keypad/KeypadContainer';
-import ProductsCotainer from 'features/Products/ProductsCotainer';
+import VendingMachineLayoutContainer from 'features/VendingMachineLayout/VendingMachineLayoutContainer';
 
 function App() {
   return (
     <div className='app'>
       <InformationMessageContainer />
-      <div className='content-wrapper'>
-        <ProductsCotainer />
-        <KeypadContainer />
-      </div>
+      <VendingMachineLayoutContainer />
     </div>
   );
 }
