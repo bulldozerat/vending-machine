@@ -1,3 +1,13 @@
+.paymentsWrapper {
+  button {
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
 .paymentsMoneyWrapper {
   display: flex;
   flex-wrap: wrap;
@@ -22,9 +32,23 @@
     height: 30px;
     font-size: 10px;
     font-weight: bold;
-    margin-right: 15px;
+    margin-right: 4px;
     text-align: center;
     line-height: 30px;
     cursor: pointer;
   }
+}
+
+.orderButtonCancel {
+  background: red;
+  color: white;
+}
+
+.orderButtonSuccess {
+  background-color: blue;
+  color: white;
+}
+
+.paymentsCancelWrapper {
+  margin-top: 10px;
 }
