@@ -3,7 +3,7 @@ import styles from './Keypad.module.scss';
 
 interface IKeypad {
   keyPadKeys: string[];
-  proceedToPayment: () => void;
+  proceedToPayment: (arg0: string) => void;
 }
 
 const Keypad = ({ keyPadKeys, proceedToPayment }: IKeypad) => {
@@ -15,7 +15,7 @@ const Keypad = ({ keyPadKeys, proceedToPayment }: IKeypad) => {
     const isKeyLimit = currentKeysList.length > 2;
 
     if (isCKey) return resetKeyList();
-    if (isEKey) return processToPayment();
+    if (isEKey) return processToPayment(currentKeysList);
     if (isKeyLimit) return;
 
     setCurrentKeyList((prev) => prev + key);
@@ -25,10 +25,10 @@ const Keypad = ({ keyPadKeys, proceedToPayment }: IKeypad) => {
     setCurrentKeyList('');
   };
 
-  const processToPayment = () => {
+  const processToPayment = (currentKeysList: string) => {
     if (currentKeysList.length !== 3) return;
     // TODO do samo validations if the code is right
-    proceedToPayment();
+    proceedToPayment(currentKeysList);
   };
 
   return (

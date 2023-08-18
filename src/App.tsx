@@ -1,12 +1,14 @@
-import Keypad from 'features/Keypad/KeypadContainer';
-import Products from 'features/Products/ProductsCotainer';
+import InformationMessageContainer from 'features/InformationMessage/InformationMessageContainer';
+import KeypadContainer from 'features/Keypad/KeypadContainer';
+import ProductsCotainer from 'features/Products/ProductsCotainer';
 
 function App() {
   return (
     <div className='app'>
+      <InformationMessageContainer />
       <div className='content-wrapper'>
-        <Products />
-        <Keypad />
+        <ProductsCotainer />
+        <KeypadContainer />
       </div>
     </div>
   );
