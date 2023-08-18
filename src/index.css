@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+  font-size: 12px;
 }
 
 .app {
@@ -21,7 +22,7 @@ body {
 }
 
 
-.content-wrapper div {
+.content-wrapper > div {
   flex-grow: 1;
   padding: 5px;
 }
