@@ -1,9 +1,10 @@
-import { useAppSelector } from 'hooks/reduxHooks';
-import { selectProducts } from 'store/slices//vandingMachineSlice';
+import { IProduct } from 'types/VendingMachine.interfaces';
 
-const Products = () => {
-  const products = useAppSelector(selectProducts);
+interface IProducts {
+  products: IProduct[];
+}
 
+const Products = ({ products }: IProducts) => {
   return (
     <div>
       {products.length &&

@@ -11,26 +11,30 @@ interface IProduct {
   code: number
 }
 
-export interface IProductsState {
+export interface IVendingMachineState {
+  isPayment: boolean
   products: IProduct[]
 }
 
-export const initialState: IProductsState = productsData;
+export const initialState: IVendingMachineState = {
+  isPayment: false,
+  products: productsData.products
+}
 
 const vendingMachineSlice = createSlice({
   name: 'vendingMachineSlice',
   initialState,
   reducers: {
-    // openMainModalWithCreateTaskForm(state) {
-    //   state.isModalOpened = true
-    //   state.renderCreateTaskForm = true
-    // },
+    proceedToPayment(state) {
+      console.log('proceedToPayment')
+      state.isPayment = true
+    },
   }
 })
 
-// export const {
-//   openMainModalWithCreateTaskForm, openMainModalWithViewTaskForm, closeMainModal
-// } = mainModalSlice.actions
+export const {
+  proceedToPayment
+} = vendingMachineSlice.actions
 
 export const selectProducts = (state: RootState) =>
   state.vendingMachine.products

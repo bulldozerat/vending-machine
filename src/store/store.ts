@@ -10,7 +10,7 @@ import {
   PURGE,
   REGISTER
 } from 'redux-persist'
-import vencingMachineSlice from 'store/slices/vandingMachineSlice'
+import vencingMachineSlice from 'store/slices/vendingMachineSlice'
 
 export const rootReducer = combineReducers({
   vendingMachine: vencingMachineSlice
