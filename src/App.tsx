@@ -1,13 +1,17 @@
-import Keypad from "features/Keypad"
-import Products from "features/Products/Products"
+import InformationMessageContainer from 'features/InformationMessage/InformationMessageContainer';
+import KeypadContainer from 'features/Keypad/KeypadContainer';
+import ProductsCotainer from 'features/Products/ProductsCotainer';
 
 function App() {
   return (
-    <div className="app">
-      <Products />
-      <Keypad />
+    <div className='app'>
+      <InformationMessageContainer />
+      <div className='content-wrapper'>
+        <ProductsCotainer />
+        <KeypadContainer />
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

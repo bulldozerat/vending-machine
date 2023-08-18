@@ -1,19 +1,24 @@
-import { useAppSelector } from 'hooks/reduxHooks';
-import { selectProducts } from 'store/slices//vandingMachineSlice';
+import { IProduct } from 'types/VendingMachine.interfaces';
+import styles from './Products.module.scss';
 
-const Products = () => {
-  const products = useAppSelector(selectProducts);
+interface IProducts {
+  products: IProduct[];
+}
 
+const Products = ({ products }: IProducts) => {
   return (
-    <div>
+    <div className={styles.productsWrapper}>
       {products.length &&
         products.map(({ id, title, price, stock, code }) => (
-          <div key={id}>
-            <div>{title}</div>
+          <div key={id} className={styles.productWrapper}>
+            <div className={styles.productTitle}>{title}</div>
             <div>
-              Code: {code} In Stock {stock}
+              Code: <span>{code}</span>
             </div>
-            <div>Price {price}$</div>
+            <div>Stock {stock}</div>
+            <div>
+              Price <span>{price}$</span>
+            </div>
           </div>
         ))}
     </div>

@@ -5,70 +5,70 @@
       "title": "Water",
       "price": 2.99,
       "stock": 10,
-      "code": 765
+      "code": "765"
     },
     {
       "id": 2,
       "title": "Coke",
       "price": 3.99,
       "stock": 3,
-      "code": 643
+      "code": "643"
     },
     {
       "id": 3,
       "title": "Sandwich",
       "price": 6.2,
       "stock": 15,
-      "code": 435
+      "code": "435"
     },
     {
       "id": 4,
       "title": "Coffee",
       "price": 2.99,
       "stock": 10,
-      "code": 222
+      "code": "222"
     },
     {
       "id": 5,
       "title": "Soda",
       "price": 1.6,
       "stock": 10,
-      "code": 555
+      "code": "555"
     },
     {
       "id": 6,
       "title": "Orange Juice",
       "price": 5.0,
       "stock": 10,
-      "code": 123
+      "code": "123"
     },
     {
       "id": 7,
       "title": "Sneakers",
       "price": 7.2,
       "stock": 30,
-      "code": 345
+      "code": "345"
     },
     {
       "id": 8,
       "title": "Moreni",
       "price": 2.99,
       "stock": 7,
-      "code": 754
+      "code": "754"
     },
     {
       "id": 9,
       "title": "Fanta",
       "price": 4.5,
       "stock": 15,
-      "code": 564
+      "code": "564"
     },
     {
       "id": 10,
       "title": "Sprite",
       "price": 6.69,
       "stock": 6,
-      "code": 432
+      "code": "432"
     }
   ]
 }
